@@ -5,8 +5,19 @@
 void show_screen()
 {
     #ifndef OPENGL
-    SDL_Surface *buffer = rotozoomSurface(screen, 0.0, 3.0, 0);
-    SDL_BlitSurface(buffer, NULL, screen2, NULL);
+    int x, y;
+    SDL_Rect rect;
+    rect.w = SCALE;
+    rect.h = SCALE;
+    for (y = 0; y < screen->h; y++)
+    {
+	    for (x = 0; x < screen->w; x++)
+	    {
+			rect.x = x*SCALE;
+			rect.y = y*SCALE;
+			SDL_FillRect(screen2, &rect, *(Uint32*)(screen->pixels+x*3+y*screen->w*3) & 0x00ffffff);
+		}
+	}
     SDL_UpdateRect(screen2, 0, 0, 0, 0);
     #else
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
