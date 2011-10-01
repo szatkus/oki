@@ -1,5 +1,5 @@
 #generated on nie maj 14 12:52:14 CEST 2006
-CC=gcc-4.2
+CC=gcc
 prefix=/root/usr
 DESTDIR=
 PREFIX=$(DESTDIR)$(prefix)
@@ -10,4 +10,4 @@ SOUND=-DSOUND
 #OPENGL=-DOPENGL
 CFLAGS= -g $(SDLFLAGS) $(OS) $(DEVEL) $(SOUND) $(OPENGL)
 WORKDIR=$(PREFIX)/games/oki
-CLIBS=-lSDL -lpthread -lSDL_image -lSDL_mixer -lGL
+CLIBS=-lSDL -lpthread -lSDL_image -lSDL_mixer -lSDL_gfx -lGL

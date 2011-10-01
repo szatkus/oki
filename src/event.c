@@ -44,7 +44,8 @@ void check_event()
                         oki->speed = oki->speed*2-1;
                         oki->run = 2;
                     }
-                    if (event.key.keysym.sym == SDLK_ESCAPE) check_quit();
+                    if (event.key.keysym.sym == SDLK_ESCAPE ||
+                    event.key.keysym.sym == SDLK_q) check_quit();
                 break;
                 case SDL_KEYUP:
                     if (oki->dir == DIR_LEFT && event.key.keysym.sym == left) 

@@ -107,7 +107,8 @@ void start_game(char *name)
         {
             case SDL_KEYDOWN:
                 if (event.key.keysym.sym == A ||
-                    event.key.keysym.sym == SDLK_RETURN)
+                    event.key.keysym.sym == SDLK_RETURN ||
+                    event.key.keysym.sym == SDLK_KP_ENTER)
                 {
                     play_snd(click);
                     load_map(map[pos].name);
@@ -149,7 +150,8 @@ void start_game(char *name)
                     pos = progress;
                 }
                 #endif
-                if (event.key.keysym.sym == SDLK_ESCAPE) check_quit();
+                if (event.key.keysym.sym == SDLK_ESCAPE ||
+					event.key.keysym.sym == SDLK_q) check_quit();
                 oki->pos.x = map[pos].x;
                 oki->pos.y = map[pos].y;
                 if (lifes > 0) show_select();
