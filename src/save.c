@@ -9,7 +9,7 @@ FILE *save;
 
 int read_save(char def)
 {
-    char ch;
+    signed char ch;
     
     ch = fgetc(save);
     if (ch > 0) return ch;

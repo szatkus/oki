@@ -107,6 +107,7 @@ void start_menu()
                                 menu_select.y = MENU_START;
                         break;
                         case SDLK_RETURN:
+                        case SDLK_z:
                             play_snd(click);
                             if (!menu_mode)
                             {

@@ -11,7 +11,7 @@ FILE *cfg;
 
 int read_cfg(char def)
 {
-    char ch;
+    signed char ch;
     
     ch = fgetc(cfg);
     if (ch > 0) return ch;
@@ -20,7 +20,7 @@ int read_cfg(char def)
 
 int read_cfg2(short int def)
 {
-    short int ch;
+    signed short int ch;
     
     ch = fgetc(cfg)*256;
     ch += fgetc(cfg);

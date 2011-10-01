@@ -24,6 +24,7 @@ int main(int *args,
 {
     char i;
     
+    mapset = 0;
     #ifdef SOUND
     atexit(Mix_CloseAudio);
     #endif
