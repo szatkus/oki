@@ -138,6 +138,9 @@ void check_event()
                     #ifdef OPENGL
                     event.motion.x /= 5;
                     event.motion.y /= 5;
+                    #else
+                    event.motion.x /= SCALE;
+                    event.motion.y /= SCALE;
                     #endif
                     cursor.x = event.motion.x/BLOCK_WIDTH;
                     cursor.y = event.motion.y/BLOCK_HEIGHT;
