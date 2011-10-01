@@ -15,7 +15,7 @@ void show_screen()
 	    {
 			rect.x = x*SCALE;
 			rect.y = y*SCALE;
-			SDL_FillRect(screen2, &rect, *(Uint32*)(screen->pixels+x*3+y*screen->w*3) & 0x00ffffff);
+			SDL_FillRect(screen2, &rect, *(Uint32*)(screen->pixels+x*4+y*screen->w*4) & 0x00ffffff);
 		}
 	}
     SDL_UpdateRect(screen2, 0, 0, 0, 0);

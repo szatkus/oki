@@ -38,7 +38,7 @@ int main(int *args,
     #endif
     #ifndef OPENGL
     screen2 = SDL_SetVideoMode(RES_X*SCALE, RES_Y*SCALE, 8, SDL_SWSURFACE | SDL_FULLSCREEN*fs);
-    screen = SDL_CreateRGBSurface(SDL_SWSURFACE, RES_X, RES_Y, 24, 0, 0, 0, 0);
+    screen = SDL_CreateRGBSurface(SDL_SWSURFACE, RES_X, RES_Y, 32, 0, 0, 0, 0);
     #else
     SDL_SetVideoMode(800, 600, 24, SDL_OPENGL | SDL_FULLSCREEN*fs);
     screen = SDL_CreateRGBSurface(SDL_SWSURFACE, 256, 128, 24, 0, 0, 0, 0);
