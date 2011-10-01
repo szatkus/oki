@@ -1,0 +1,78 @@
+0.1.6
+- New mapset: Aluminium
+- More comfortable map editor
+- Summary after every level
+- Many bugfixes
+
+0.1.5
+Main:
+- Control fixes (easier to challange first level)
+- OpenGL support
+- One easy and one very hard level
+- Mapset chooser
+Details:
+- Cloner
+- Trap & Bomb
+- Bomb Planting
+
+0.1.4
+Main:
+- Completly new tiles
+- Checkpoint
+- Better interaction
+- First levels of "Back to Home" mapset
+- Few new monsters
+Details:
+- Super Upper
+- ":", "!" & "?" in text mode
+- oki_logger
+
+.:0.0.x:.
+
+0.0.4
+Main:
+- Doors and Keys
+- Physic changed again
+- Nicer dialog window
+- Final level
+- Better enemies' behavior
+- Configure script
+Details:
+- Jump Time
+- Better fonts functions
+- New logo by Juri Chome
+- RPM spec file (incomplete)
+- Better score counting system
+- FPS
+
+0.0.3
+- Animations
+- Fixed collisions
+- Save
+- Screen with score
+- Killed monster's animation
+- Faster moving in map editor
+- Pause
+- Upper
+- Big Robo, Gozel & Gozel 2.0
+- User's Manual
+- Two new levels
+
+0.0.2
+- Many fixes in the map editor
+- Coins of Strength
+- Game works 25 times faster
+- Better font
+- PaKman
+- Second level
+- Options and configuration
+- Developer mode
+- Blink
+
+0.0.1
+- First level
+- Coins and lifes
+- README and CHANGELOG
+- Map editor
+- Bugfixes
+- Menu

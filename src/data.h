@@ -1,0 +1,1 @@
+char *getdata(char *name);

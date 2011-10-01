@@ -1,0 +1,41 @@
+/*  GIMP icon image format -- S. Kimball, P. Mattis  */
+/*  Image name: oki  */
+
+
+#define oki_width 32
+#define oki_height 32
+static char *oki_bits [] = 
+{
+  ".............aaaaaaaaaaaaa......",
+  ".............aaaaaaaaaaaaa......",
+  ".............aaaaaaaaaaaaa......",
+  "......aaaaaaaaaahhhhhhhhhhaaa...",
+  "......aaaaaaaaaahhhhhhhhhhaaa...",
+  "......aaaaaaaaaahhhhhhhhhhaaa...",
+  "...aaaaaaahhhaaahhhhhhhhhhaaa...",
+  "...aaaaaaahhhaaahhhhhhhhhhaaa...",
+  "...aaaaaaahhhaaahhhhhhhhhhaaa...",
+  "...aaaaaaahhhaaahhhhhhhhhhaaa...",
+  "aaaaaahhhhaaaaaahhhaaahhhhhhhaaa",
+  "aaaaaahhhhaaaaaahhhaaahhhhhhhaaa",
+  "aaaaaahhhhaaaaaahhhaaahhhhhhhaaa",
+  "aaahhhaaaahhhaaahhhhhhhhhhhhhaaa",
+  "aaahhhaaaahhhaaahhhhhhhhhhhhhaaa",
+  "aaahhhaaaahhhaaahhhhhhhhhhhhhaaa",
+  "aaaaaahhhhaaahhhhhhhhhhhhhaaa...",
+  "aaaaaahhhhaaahhhhhhhhhhhhhaaa...",
+  "aaaaaahhhhaaahhhhhhhhhhhhhaaa...",
+  "aaahhhaaaahhhhhhhhhhhhhhhhaaa...",
+  "aaahhhaaaahhhhhhhhhhhhhhhhaaa...",
+  "aaahhhaaaahhhhhhhhhhhhhhhhaaa...",
+  "...aaaaaaaaaaaaaaaaaaaaaaa......",
+  "...aaaaaaaaaaaaaaaaaaaaaaa......",
+  "...aaaaaaaaaaaaaaaaaaaaaaa......",
+  "...aaaaaaaaaaaaaaaaaaaaaaa......",
+  "aaahhhhhhhhhhaaahhhhhhaaaa......",
+  "aaahhhhhhhhhhaaahhhhhhaaaa......",
+  "aaahhhhhhhhhhaaahhhhhhaaaa......",
+  "...aaaaaaaaaa...aaaaaa..........",
+  "...aaaaaaaaaa...aaaaaa..........",
+  "...aaaaaaaaaa...aaaaaa.........."
+};

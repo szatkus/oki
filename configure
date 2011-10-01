@@ -1,0 +1,102 @@
+#!/bin/bash
+#
+MAKE=Makefile.global.in
+PREFIX=/usr/local
+DEVEL=0
+SOUND=1
+OPENGL=1
+for arg in $1 $2 $3 $4 $5 $6 $7 $8 $9
+do
+    case $arg in
+        "--help") echo "--enable-devel - developer mode"
+                  echo "--disable-sound - w\o sound (if you don't have SDL_mixer)" 
+                  exit ;;
+        "--enable-devel") DEVEL=1 ;;
+        "--disable-sound") SOUND=0 ;;
+        "--disable-opengl") OPENGL=0 ;;
+        "--prefix="*) PREFIX=${arg:9:265} ;;
+    esac
+done
+echo -n "#generated on " > $MAKE
+date >> $MAKE
+echo -n "checking for gcc..."
+if which gcc &> /dev/null; then 
+    echo "yes"
+    echo "CC=gcc" >> $MAKE
+else
+    echo "no"
+    echo "#error#"
+    exit
+fi;
+echo -n "writing prefix..."
+echo $PREFIX
+echo -n "checking os..."
+echo "prefix=$PREFIX" >> $MAKE
+echo "DESTDIR=" >> $MAKE
+echo "PREFIX=\$(DESTDIR)\$(prefix)" >> $MAKE
+if [ $HOME ]; then
+    echo "unix"
+    echo "OS=-DUNIX" >> $MAKE
+else
+    echo "win32"
+    echo "OS=-DWIN32" >> $MAKE
+fi;
+echo -n "developer mode..."
+if [ $DEVEL = 1 ]; then
+    echo "yes"
+else
+    echo "no"
+    echo -n "#" >> $MAKE
+fi;
+echo "DEVEL=-DDEVEL" >> $MAKE
+echo -n "checking for SDL..."
+if sdl-config --version &> /dev/null; then
+    echo `sdl-config --version`
+    CLIBS=`sdl-config --libs`
+else
+    echo "no"
+    echo "#error#"
+    exit
+fi;
+echo "SDLFLAGS=`sdl-config --cflags`" >> $MAKE
+CLIBS="$CLIBS -lSDL_image"
+echo -n "checking for SDL_mixer..."
+if [ $SOUND = 1 ]; then
+    if ldd /usr/lib/libSDL_mixer.so* &> /dev/null; then 
+        echo "yes"
+        CLIBS="$CLIBS -lSDL_mixer"
+    else
+        echo "no"
+        echo -n "#" >> $MAKE
+    fi;
+else
+    echo "no"
+    echo -n "#" >> $MAKE
+fi;
+echo "SOUND=-DSOUND" >> $MAKE
+echo -n "checking for OpenGL..."
+if [ $OPENGL = 1 ]; then
+    if ldd /usr/lib/libGL.so* &> /dev/null; then 
+        echo "yes"
+        CLIBS="$CLIBS -lGL"
+    else
+        echo "no"
+        echo -n "#" >> $MAKE
+    fi;
+else
+    echo "no"
+    echo -n "#" >> $MAKE
+fi;
+echo "OPENGL=-DOPENGL" >> $MAKE
+echo "CFLAGS=-O2 \$(SDLFLAGS) \$(OS) \$(DEVEL) \$(SOUND) \$(OPENGL)" >> $MAKE
+echo "WORKDIR=\$(PREFIX)/games/oki" >> $MAKE
+echo "CLIBS=$CLIBS" >> $MAKE
+echo "Creating Makefile.global"
+mv $MAKE Makefile.global
+echo "Creating Makefile"
+mv Makefile.in Makefile &> /dev/null
+echo "Creating oki"
+echo -e "#!/bin/bash\ncd $PREFIX/games/oki\n./oki \044*" > extra/oki_bash
+chmod a=rx extra/oki_bash
+echo
+echo "type \"make\""

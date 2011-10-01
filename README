@@ -1,0 +1,48 @@
+Oki version 0.1.6
+
+Release date: 14/05/06
+Author: szatkus <szatkus at op dot pl>
+WWW: www.szatkus.tk
+
+1. License
+2. Requirements
+3. Control
+4. Problems
+5. Thanks
+
+1. License
+GNU GPL. Details in COPYING or http://www.gnu.org/licenses/gpl.html
+
+2. Requirements
+In theory it should work on Pentium 133 and 16 RAM:) 
+But only "default" mapset. New mapsets use exactly 133 MHZ and 16 MB.
+It require SDL & SDL_image with libPNG support.
+Optionally SDL_mixer & OpenGL.
+
+3. Control
+Game:
+Left, Right - Move
+Up, Down - Look up/down
+Z - Jump
+X - Run
+Esc - Quit
+Map editor:
+Arrows - Move map
+LMB - Place tile
+MMB - Works like Q or W & X or like L
+RMB - Probe tile
+Shift + Arrows - Resize map
+Ctrl + Arrows - Move map fastly
+A, D or wheel - Select tile 
+W, X - Select layer
+Q - Change display mode
+S - Save
+L - List of all tiles
+T (over text event) - Edit
+
+4. Problems
+a). If you have installed version 0.0.2, delete file $HOME/.oki
+
+5. Thanks
+Juri Chome - Logo
+Jeremy Phenix - RPM

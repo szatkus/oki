@@ -1,0 +1,3 @@
+Type "./configure", "make" & "make install"
+It require SDL & SDL_image with libPNG support.
+Optionally SDL_mixer and OpenGL.

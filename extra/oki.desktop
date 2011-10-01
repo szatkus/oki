@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=oki
+Exec=oki
+Icon=oki40.png
+Type=Application
+Terminal=False
+Categories=Application;Game;ArcadeGame;

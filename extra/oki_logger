@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+rm -f oki_log
+while true; do
+ps --format "pid %cpu %mem vsz" -C oki >> oki_log
+sleep 1
+done
