@@ -88,9 +88,8 @@ Uint8 press(Uint8 id)
     Uint8 x, y, i, result;
     
     result = 0;
-    for (i=0;i<=obj[id].pos.w/BLOCK_WIDTH;i++)
+    for (x = (obj[id].pos.x+2)/BLOCK_WIDTH; x <= (obj[id].pos.x+obj[id].pos.w-3)/BLOCK_WIDTH; x++)
     {
-        x = (obj[id].pos.x+(i==0)*2-(i!=0)*3)/BLOCK_WIDTH+i;
         y = (obj[id].pos.y+obj[id].pos.h)/BLOCK_HEIGHT;
         if (level.map[x][y].type >= MAP_WALL)
         {

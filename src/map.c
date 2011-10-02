@@ -92,6 +92,7 @@ void load_map(char filename[256])
                 obj[last_obj].HP = 0;
                 obj[last_obj].blink = 0;
                 obj[last_obj].strength = 0;
+                obj[last_obj].ghost = 0;
                 obj[last_obj].shoot = 0;
                 obj[last_obj].jump.power = 0;
                 obj[last_obj].jump.frame = 0;
