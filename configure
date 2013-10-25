@@ -28,6 +28,29 @@ else
     echo "#error#"
     exit
 fi;
+echo -n "checking for coffee..."
+if which coffee &> /dev/null; then 
+    echo "yes"
+    echo "COFFEE=coffee" >> $MAKE
+else
+    echo "no"
+fi;
+UGLIFY=cat
+echo -n "checking for uglifyjs..."
+if which uglifyjs &> /dev/null; then 
+    echo "yes"
+    UGLIFY=uglifyjs
+else
+    echo "no"
+fi;
+echo -n "checking for closure..."
+if which closure &> /dev/null; then 
+    echo "yes"
+    UGLIFY=closure
+else
+    echo "no"
+fi;
+echo "UGLIFY=$UGLIFY" >> $MAKE
 echo -n "writing prefix..."
 echo $PREFIX
 echo -n "checking os..."

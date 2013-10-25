@@ -21,6 +21,7 @@ clean:
 	@make -C gfx clean
 	@make -C maps clean
 	@make -C snd clean
+	@make -C js clean
 
 install:
 	mkdir -p $(WORKDIR)
@@ -46,3 +47,6 @@ mrproper: clean
 	rm -f Makefile.global
 	rm -f extra/oki_bash
 	mv Makefile Makefile.in
+
+webapp:
+	@make -C js

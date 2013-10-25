@@ -1,13 +1,15 @@
-#generated on nie maj 14 12:52:14 CEST 2006
+#generated on Fri Oct 25 02:02:22 CEST 2013
 CC=gcc
-prefix=/root/usr
+COFFEE=coffee
+UGLIFY=closure
+prefix=/usr/local
 DESTDIR=
 PREFIX=$(DESTDIR)$(prefix)
 OS=-DUNIX
-DEVEL=-DDEVEL
-SDLFLAGS=-I/usr/include/SDL -D_REENTRANT
-SOUND=-DSOUND
-#OPENGL=-DOPENGL
-CFLAGS= -g $(SDLFLAGS) $(OS) $(DEVEL) $(SOUND) $(OPENGL)
+#DEVEL=-DDEVEL
+SDLFLAGS=-I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT
+#SOUND=-DSOUND
+OPENGL=-DOPENGL
+CFLAGS=-O2 $(SDLFLAGS) $(OS) $(DEVEL) $(SOUND) $(OPENGL)
 WORKDIR=$(PREFIX)/games/oki
-CLIBS=-lSDL -lpthread -lSDL_image -lSDL_mixer -lSDL_gfx -lGL
+CLIBS=-L/usr/lib -lSDL -lpthread -lSDL_image -lGL

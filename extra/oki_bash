@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /root/usr/games/oki
+cd /usr/local/games/oki
 ./oki $*
