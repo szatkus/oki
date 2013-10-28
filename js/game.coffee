@@ -56,19 +56,25 @@ app.game =
     @selectedMap = 1;
     #mask = 0;
     @oki = new app.GameObject
+      image: app.renderer.images.oki
+      animation:
+        x: 0
+        y: 0
+        width: app.BLOCK_WIDTH
+        height: app.BLOCK_HEIGHT
     #die = 0;
     #pause_game = 0;
     #darkness = 1;
     @loadMapset mapsetName, =>
       @loadGame();
-      @redraw();
-      window.onkeydown = (event) =>
-        if event.which == app.config.buttonA or event.which == 13
-          app.sound.play('click')
-          mapName = @maps[@progress].name
-          map = new app.Map("maps/#{mapsetName}/#{mapName}", this)
-          map.start()
-          ###
+      #@redraw();
+      #window.onkeydown = (event) =>
+       # if event.which == app.config.buttonA or event.which == 13
+      app.sound.play('click')
+      mapName = @maps[@progress].name
+      map = new app.Map("maps/#{mapsetName}/#{mapName}", this)
+      map.start()
+      ###
           check_event();
           if (lifes < 0) 
           {
@@ -92,9 +98,10 @@ app.game =
               while (event.type != SDL_KEYDOWN)
                 SDL_PollEvent(&event);
               @selectedMap = 0;
-          ###
+          
         if event.which == 27 or event.which == 81
           check_quit()
           #oki->pos.x = map[pos].x;
           #oki->pos.y = map[pos].y;
           #if (lifes > 0) show_select();
+###

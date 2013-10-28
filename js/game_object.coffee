@@ -46,20 +46,21 @@ class app.GameObject
     strength: 0
     run: null
     fall: null
-    blink: null
+    blink: 0
     damage: 0
     life: 0
-    ghost: null
+    ghost: 0
     shoot: 0
     speed: 0
     jumpPower: 0
     jumpFrame: 0
     jumpDuration: 0
     image: null
-    position: {}
+    x: 0
+    y: 0
     animation: {}
     oldAnimation: {}
     constructor: (properties) ->
       if properties?
-        for i in properties
+        for i of properties
           this[i] = properties[i]

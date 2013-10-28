@@ -34,4 +34,4 @@ app.start = (canvas) ->
         #@game.camera.width = @renderer.resolution.x
         #@game.camera.height = @renderer.resolution.y
         #if (enable_fps) SDL_CreateThread(&count_fps, NULL);
-        @menu.start()
+        @game.start('default')

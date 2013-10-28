@@ -52,6 +52,7 @@ app.renderer =
       'glass'
       'comp'
       'logo'
+      'exit'
     ]
     for i in [1..MONSTERS_COUNT]
       imagesNames.push("monster#{i}")

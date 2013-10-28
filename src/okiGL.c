@@ -1,6 +1,5 @@
 #include "global.h"
 #include "okiGL.h"
-#include "SDL_rotozoom.h"
 
 void show_screen()
 {
